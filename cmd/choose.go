@@ -13,7 +13,7 @@ import (
 var chooseCmd = &cobra.Command{
 	Use:   "choose",
 	Short: "A brief description of your command",
-	Long:  ``,
+	Long:  `Here you can choose any no of jokes you want to have!!!`,
 	Run: func(cmd *cobra.Command, args []string) {
 		fmt.Println("choose called")
 	},
