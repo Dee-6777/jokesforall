@@ -5,7 +5,6 @@ package cmd
 
 import (
 	"fmt"
-	"log"
 	"strconv"
 
 	"github.com/spf13/cobra"
@@ -14,7 +13,7 @@ import (
 // chooseCmd represents the choose command
 var chooseCmd = &cobra.Command{
 	Use:   "choose",
-	Short: "A brief description of your command",
+	Short: "Choose the number of jokes you want to have",
 	Long:  `Here you can choose any no of jokes you want to have!!!`,
 	Args:  cobra.ExactArgs(1),
 	Run: func(cmd *cobra.Command, args []string) {
@@ -23,15 +22,15 @@ var chooseCmd = &cobra.Command{
 	},
 }
 
-func chooseJokes(args []string) {
-	var num int
+func chooseJokes(args []string) bool {
 	num, err := strconv.Atoi(args[0])
-	if err != nil {
-		log.Printf("Couldnot read the response. Error occured %v", err)
-	}
 	for i := 0; i < num; i++ {
 		getRandomJoke()
 	}
+	if len(args) == 0 && err == nil {
+		return true
+	}
+	return false
 }
 func init() {
 	rootCmd.AddCommand(chooseCmd)
