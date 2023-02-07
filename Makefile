@@ -4,6 +4,7 @@ export CGO_ENABLED=0
 BINARY=jokesforall
 
 
+
 all: build
 
 build:
@@ -14,20 +15,19 @@ install:
 
 run:
 	go build 
-	./$(BINARY)
+	$(BINARY)
 
 test:
 	go test ./cmd -v
 
 joke:
-	go build 
-	./$(BINARY) joke
+	$(BINARY) 
 
 choose:
 	go build 
 	@echo "Enter number of jokes you want to have:"; \
     read num; \
-	./$(BINARY) choose $$num
+	$(BINARY) --num $$num
 
 mod:
 	go mod tidy 
