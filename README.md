@@ -21,11 +21,11 @@ go install github.com/Dee-6777/jokesforall
 ### HOW TO USE THIS TOOL? 
 * Get a random joke: `This command returns a random joke into your terminal.`
 ```
-jokesforall random
+jokesforall 
 ```
 * Get a random joke with any number of times: `This command returns a random joke any number of time you want to have.`
 ```
-jokesforall choose <number>
+jokesforall --num <number>
 ```
 
 ### MAKEFILE
