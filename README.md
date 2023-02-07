@@ -25,7 +25,7 @@ jokesforall
 ```
 * Get a random joke with any number of times: `This command returns a random joke any number of time you want to have.`
 ```
-jokesforall --num <number>
+jokesforall <number>
 ```
 
 ### MAKEFILE
