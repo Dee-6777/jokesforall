@@ -29,7 +29,9 @@ jokesforall --num <number>
 ```
 
 ### MAKEFILE
+
 A makefile has been created to simplify the experience of the user. 
+
 #### FUNCTIONALITY
 * Build the binary file
 ```
@@ -50,6 +52,10 @@ make test
 * Get a random joke
 ```
 make joke
+```
+* Get a random joke any number of times
+```
+make choose
 ```
 * Build mod file
 ```
