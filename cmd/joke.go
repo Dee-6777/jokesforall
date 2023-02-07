@@ -45,10 +45,7 @@ func getRandomJoke() bool {
 		log.Printf("Could not unmarshall response %v", err)
 	}
 	fmt.Println(string(joke.Joke))
-	if len(joke.Joke) > 0 {
-		return true
-	}
-	return false
+	return len(joke.Joke) > 0
 }
 
 // gets the joke from the API
