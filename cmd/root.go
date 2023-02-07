@@ -4,16 +4,24 @@ Copyright © 2023 NAME HERE <EMAIL ADDRESS>
 package cmd
 
 import (
-	"os"
-
 	"github.com/spf13/cobra"
+	"os"
 )
 
 // rootCmd represents the base command when called without any subcommands
 var rootCmd = &cobra.Command{
 	Use:   "jokesforall",
-	Short: "A brief description of your application",
-	Long:  ` `,
+	Short: "Generate a random joke",
+	Long:  `A joke generator CLI for some giggle and laughs...Have fun!!!`,
+	Run: func(cmd *cobra.Command, args []string) {
+		choice, _ := cmd.Flags().GetString("num")
+		args = append(args, choice)
+		if choice != "" {
+			chooseJokes(args)
+		} else {
+			getRandomJoke()
+		}
+	},
 }
 
 func Execute() {
@@ -25,4 +33,5 @@ func Execute() {
 
 func init() {
 	rootCmd.Flags().BoolP("toggle", "t", false, "Help message for toggle")
+	rootCmd.PersistentFlags().String("num", "", "Number of jokes you want to have")
 }

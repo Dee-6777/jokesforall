@@ -5,9 +5,9 @@ package cmd
 
 import (
 	"fmt"
-	"strconv"
-
 	"github.com/spf13/cobra"
+	"log"
+	"strconv"
 )
 
 // chooseCmd represents the choose command
@@ -24,6 +24,9 @@ var chooseCmd = &cobra.Command{
 
 func chooseJokes(args []string) bool {
 	num, err := strconv.Atoi(args[0])
+	if err != nil {
+		log.Printf("Not a valid argument. Error %v", err)
+	}
 	for i := 0; i < num; i++ {
 		getRandomJoke()
 	}
