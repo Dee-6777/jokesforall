@@ -13,10 +13,9 @@ var rootCmd = &cobra.Command{
 	Use:   "jokesforall",
 	Short: "Generate a random joke",
 	Long:  `A joke generator CLI for some giggle and laughs...Have fun!!!`,
+	Args:  cobra.MaximumNArgs(1),
 	Run: func(cmd *cobra.Command, args []string) {
-		choice, _ := cmd.Flags().GetString("num")
-		args = append(args, choice)
-		if choice != "" {
+		if len(args) > 0 {
 			chooseJokes(args)
 		} else {
 			getRandomJoke()

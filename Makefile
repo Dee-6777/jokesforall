@@ -27,7 +27,7 @@ choose:
 	go build 
 	@echo "Enter number of jokes you want to have:"; \
     read num; \
-	$(BINARY) --num $$num
+	$(BINARY) $$num
 
 mod:
 	go mod tidy 
