@@ -22,6 +22,12 @@ joke:
 	go build 
 	./$(BINARY) joke
 
+choose:
+	go build 
+	@echo "Enter number of jokes you want to have:"; \
+    read num; \
+	./$(BINARY) choose $$num
+
 mod:
 	go mod tidy 
 
