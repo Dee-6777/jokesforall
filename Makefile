@@ -18,12 +18,12 @@ run:
 test:
 	go test ./cmd -v
 
-clean:
-	rm ${BINARY_NAME}
-
 joke:
 	go build 
 	./$(BINARY) joke
 
 mod:
 	go mod tidy 
+
+clean:
+	rm ${BINARY}

@@ -18,7 +18,7 @@ The only prerequisite is to have `go1.19.5` and `cobra` installed in the local s
 go install github.com/Dee-6777/jokesforall
 ```
 
-### How to use the tool? 
+### HOW TO USE THIS TOOL? 
 * Get a random joke: `This command returns a random joke into your terminal.`
 ```
 jokesforall random
@@ -26,4 +26,36 @@ jokesforall random
 * Get a random joke with any number of times: `This command returns a random joke any number of time you want to have.`
 ```
 jokesforall choose <number>
+```
+
+### MAKEFILE
+A makefile has been created to simplify the experience of the user. 
+#### FUNCTIONALITY
+* Build the binary file
+```
+make build
+```
+* Install
+```
+make install
+```
+* Run main.go
+```
+make run
+```
+* Test 
+```
+make test
+```
+* Get a random joke
+```
+make joke
+```
+* Build mod file
+```
+make mod
+```
+* Remove the binary file
+```
+make clean
 ```
