@@ -3,6 +3,7 @@ export CGO_ENABLED=0
 
 BINARY=jokesforall
 
+
 all: build
 
 build:
