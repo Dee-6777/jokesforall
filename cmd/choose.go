@@ -5,9 +5,10 @@ package cmd
 
 import (
 	"fmt"
-	"github.com/spf13/cobra"
 	"log"
 	"strconv"
+
+	"github.com/spf13/cobra"
 )
 
 // chooseCmd represents the choose command
@@ -35,6 +36,7 @@ func chooseJokes(args []string) bool {
 	}
 	return false
 }
+
 func init() {
 	rootCmd.AddCommand(chooseCmd)
 }
