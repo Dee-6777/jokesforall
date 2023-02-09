@@ -22,7 +22,7 @@ var jokeCmd = &cobra.Command{
 	Long:  `A joke generator CLI for some giggle and laughs...Have fun!!!`,
 	Run: func(cmd *cobra.Command, args []string) {
 		fmt.Println("joke called")
-		getRandomJoke()
+		fmt.Println(GetRandomJoke())
 	},
 }
 
@@ -38,19 +38,18 @@ type Joke struct {
 }
 
 // function to return random joke
-func getRandomJoke() bool {
+func GetRandomJoke() string {
 	url := "https://icanhazdadjoke.com/"
-	responseBytes := getJokeData(url)
+	responseBytes := GetJokeData(url)
 	joke := Joke{}
 	if err := json.Unmarshal(responseBytes, &joke); err != nil {
 		log.Printf("Could not unmarshall response %v", err)
 	}
-	fmt.Println(string(joke.Joke))
-	return len(joke.Joke) > 0
+	return string(joke.Joke)
 }
 
 // gets the joke from the API
-func getJokeData(baseAPI string) []byte {
+func GetJokeData(baseAPI string) []byte {
 	request, err := http.NewRequest(
 		http.MethodGet,
 		baseAPI,

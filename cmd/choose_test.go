@@ -8,7 +8,7 @@ func TestChoose(T *testing.T) {
 	// testing the arguments
 	var args []string
 	args = append(args, "d")
-	got := chooseJokes(args)
+	got := ChooseJokes(args)
 	want := false
 	if got != want {
 		T.Errorf("TEST CASE FAILED. Got %v, Wanted %v", got, want)
@@ -18,7 +18,7 @@ func TestChoose(T *testing.T) {
 
 	var args1 []string
 	args1 = append(args1, "1", "2")
-	got1 := chooseJokes(args1)
+	got1 := ChooseJokes(args1)
 	want1 := false
 	if got1 != want1 {
 		T.Errorf("TEST CASE FAILED. Got %v, Wanted %v", got1, want1)
@@ -28,7 +28,7 @@ func TestChoose(T *testing.T) {
 
 	var args2 []string
 	args2 = append(args2, "def", "50", "a123")
-	got2 := chooseJokes(args2)
+	got2 := ChooseJokes(args2)
 	want2 := false
 	if got2 != want2 {
 		T.Errorf("TEST CASE FAILED. Got %v, Wanted %v", got2, want2)

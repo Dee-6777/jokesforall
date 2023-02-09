@@ -19,17 +19,17 @@ var chooseCmd = &cobra.Command{
 	Args:  cobra.ExactArgs(1),
 	Run: func(cmd *cobra.Command, args []string) {
 		fmt.Println("choose called")
-		chooseJokes(args)
+		ChooseJokes(args)
 	},
 }
 
-func chooseJokes(args []string) bool {
+func ChooseJokes(args []string) bool {
 	num, err := strconv.Atoi(args[0])
 	if err != nil {
 		log.Printf("Not a valid argument. Error %v", err)
 	}
 	for i := 0; i < num; i++ {
-		getRandomJoke()
+		fmt.Println(GetRandomJoke())
 	}
 	if len(args) == 0 && err == nil {
 		return true
