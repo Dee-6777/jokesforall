@@ -47,11 +47,11 @@ func Greet() {
 	flex.SetInputCapture(func(event *tcell.EventKey) *tcell.EventKey {
 		if event.Rune() == 97 {
 			form.Clear(true)
-			addChooseForm()
+			jokeForm()
 			pages.SwitchToPage("Joke of the day")
 		} else if event.Rune() == 98 {
 			form.Clear(true)
-			addRandomForm()
+			jokeChooseForm()
 			pages.SwitchToPage("Your Jokes")
 		} else if event.Rune() == 113 {
 			app.Stop()
@@ -75,7 +75,7 @@ func addJokeList() {
 	}
 }
 
-func addRandomForm() *tview.Form {
+func jokeForm() *tview.Form {
 
 	jokes_ := Datas{}
 
@@ -106,7 +106,7 @@ func addRandomForm() *tview.Form {
 	return form
 }
 
-func addChooseForm() *tview.Form {
+func jokeChooseForm() *tview.Form {
 
 	jokes_ := Datas{}
 	b, _ := base64.StdEncoding.DecodeString(photo)
