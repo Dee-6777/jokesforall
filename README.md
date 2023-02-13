@@ -65,3 +65,21 @@ make mod
 ```
 make clean
 ```
+
+## UI of my CLI TOOL
+
+Made using tview
+
+### menu
+![Screenshot from 2023-02-13 20-11-14](https://user-images.githubusercontent.com/73513838/218524962-814b86eb-5319-490d-8551-28b8cacb2694.png)
+### generate a random joke
+![Screenshot from 2023-02-13 20-08-08](https://user-images.githubusercontent.com/73513838/218522778-9b18d20b-a54b-4251-839a-a521dc29e94a.png)
+
+![Screenshot from 2023-02-13 20-08-34](https://user-images.githubusercontent.com/73513838/218523222-226b1d35-4c04-4192-a736-ad429fbb0ae8.png)
+### get n no of jokes
+![Screenshot from 2023-02-13 20-10-23](https://user-images.githubusercontent.com/73513838/218523664-235e196c-53fb-4f59-8296-3197e02cd031.png)
+
+![Screenshot from 2023-02-13 20-09-09](https://user-images.githubusercontent.com/73513838/218524208-801af20b-1aec-4331-9c1e-6c4ce334b9d4.png)
+
+### quit
+` Closes the app `
